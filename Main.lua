@@ -115,7 +115,7 @@ function SetupButtons()
 		app.LoadingTerrain.Visible = false
 		isBusy = false
 	end)
-	
+	--[[
 	-- Insert TerrainSaveLoad API:
 	app.InsertAPI.MouseButton1Click:connect(function()
 		if (isBusy) then return end
@@ -123,12 +123,13 @@ function SetupButtons()
 		api.Parent = game.ServerScriptService
 		game.Selection:Set({api})
 	end)
-	
+	]]
 	-- Exit plugin:
 	app.Exit.MouseButton1Click:connect(function()
 		Click()
 	end)
-	
+	-- Help is removed, please check the Help.MD for more information how to use it.
+	--[[
 	-- Display Help frame:
 	app.Help.MouseButton1Click:connect(function()
 		app.HelpFrame.Visible = (not app.HelpFrame.Visible)
@@ -139,6 +140,7 @@ function SetupButtons()
 	app.HelpFrame.Exit.MouseButton1Click:connect(function()
 		app.HelpFrame.Visible = false
 	end)
+	]]
 	
 end
 
