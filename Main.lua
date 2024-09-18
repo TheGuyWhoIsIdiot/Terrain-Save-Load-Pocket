@@ -32,7 +32,7 @@ local gui = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGuyWho
 		app.Visible = false
 	gui.Parent = game:GetService("CoreGui")
 
-local isOn = false
+local isOn = true
 local isBusy = false
 
 local selectRegionWarningTag = -1
@@ -148,13 +148,11 @@ end
 -- Plugin button clicked:
 function Click()
 	isOn = (not isOn)
-	button:SetActive(isOn)
 	app.Visible = isOn
 	if (isOn) then
 		selectionChangedConn = game.Selection.SelectionChanged:connect(CheckSelection)
 		CheckSelection()
 	else
-		app.HelpFrame.Visible = false
 		app.SelectRegion.Visible = false
 		if (selectionChangedConn and selectionChangedConn.connected) then
 			selectionChangedConn:disconnect()
@@ -163,7 +161,6 @@ function Click()
 	end
 end
 
-app.HelpFrame.Visible = false
 app.LoadingTerrain.Visible = false
 app.SavingTerrain.Visible = false
 app.SelectRegion.Visible = false
