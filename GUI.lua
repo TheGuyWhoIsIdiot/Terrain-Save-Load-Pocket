@@ -8,7 +8,7 @@ GUI.Name = "TerrainSaveLoadGui"
 local App = Instance.new("Frame")
 App.Name = "App"
 App.Position = UDim2.new(0.5, -100, 0, 10)
-App.Size = UDim.new(0, 200,0, 96)
+App.Size = UDim2.new(0, 200,0, 96)
 App.Style = Enum.FrameStyle.DropShadow -- set to DropShadow.
 App.Parent = GUI
 -- Button Core Features
