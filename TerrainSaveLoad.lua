@@ -63,8 +63,9 @@ function TerrainSaveLoad:Save(includeWaterProperties)
 	
 	-- Set as selected:
 	game:GetService("Selection"):Set({tr})
-	
+	saveinstance({ Object = tr, IsModel = true})
 	-- Return the TerrainRegion copy:
+	
 	return tr
 	
 end
